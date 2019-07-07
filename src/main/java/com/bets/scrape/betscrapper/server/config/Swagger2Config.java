@@ -1,9 +1,8 @@
 package com.bets.scrape.betscrapper.server.config;
 
-import static springfox.documentation.builders.PathSelectors.regex;
-import java.util.Collections;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -20,7 +19,7 @@ public class Swagger2Config {
         return new Docket(DocumentationType.SWAGGER_2).select()
             .apis(RequestHandlerSelectors
                 .basePackage("com.bets.scrape.betscrapper.controller"))
-            .paths(PathSelectors.regex("/.*"))
+            .paths(PathSelectors.any())
             .build().apiInfo(apiEndPointsInfo());
     }
     private ApiInfo apiEndPointsInfo() {

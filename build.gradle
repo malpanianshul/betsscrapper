@@ -18,13 +18,27 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	compile('org.springframework.boot:spring-boot-starter-web') 
+     
+  //  compile('org.springframework.boot:spring-boot-starter-log4j2')
+     
+	
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework:spring-test'
 	testImplementation 'io.projectreactor:reactor-test'
 	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
-	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.0.2'
-	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
-compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+
+  // https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
+	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+	// https://mvnrepository.com/artifact/org.projectlombok/lombok
+	compile group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
+	 compile 'org.springframework.boot:spring-boot-starter-webflux'
+    compile 'org.projectreactor:reactor-spring:1.0.1.RELEASE'
+	
+	testImplementation 'com.squareup.okhttp3:mockwebserver:4.0.0'
+	testImplementation 'com.squareup.okhttp3:okhttp:4.0.0'
 	
 }
